@@ -60,15 +60,42 @@ p {
   padding: 0;
 }
 
+/* button */
+
 .button {
-  border: none;
-  background: none;
-  cursor: pointer;
+  display: none;
+  --button-color: #333;
+
+  background: transparent;
+  border: 3px solid var(--button-color, #000);
+  border-radius: .25rem;
 }
 
-.hamburger {
-
+.button .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
 }
+
+.button[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.button[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.button[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.button[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
 
 /* nav bar */
 
@@ -80,7 +107,7 @@ p {
   top: 0;
 }
 
-.nav-bar{
+.primary-navigation{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,12 +124,6 @@ p {
   outline: #000000;
 }
 
-.button {
-  outline: none;
-  fill: none;
-  display: none;
-}
-
 
 .nav-list a {
   text-decoration: none;
@@ -114,32 +135,29 @@ p {
   color: var(--clr-primary-accent);
 }
 
-.container{
-  --max-width: 1110px;
-  --container-padding: 1rem;
-
-  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
-  margin-inline: auto;
-}
-
 @media (max-width: 50em){
-  .nav-bar {
+  .button {
+    display: flex;
   }
 
   .nav-list {
-    padding-top: 1rem;
-    flex-direction: column;
     display: none;
+    position: absolute;
+    text-align: center;
+    background-color: antiquewhite;
+    width: 25%;
+    left: 75%;
+    top: 100%;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 6rem 0;
   }
 
-  .button {
-    display: contents;
+  .nav-list[data-visible]{
+    display: flex;
   }
-
-  .break {
-    flex-basis: 100%;
-  }
-
 }
 
 /* main */
@@ -148,68 +166,48 @@ p {
   background-image: url(Images/Banner.JPG);
   background-size: cover;
   background-position: center;
-  padding: 10rem 0;
+  padding: 20rem 0;
 }
 
 .banner {
-  background-color:cadetblue;
+  background-color:gainsboro;
+  padding: 2rem;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 6%;
+  row-gap: 1rem;
+}
+
+.columns *{
+  flex: 44%;
+}
+
+.center-flex-div {
+  align-self: center;
 }
 
 .center-text {
   text-align: center;
 }
 
-.flow {
-  padding: 1rem 0;
-}
-
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@media (max-width: 50em){
-  .columns {
-    flex-direction: column;
-  }
-}
-
 .image {
   width: 30rem;
   aspect-ratio: 2 / 1;
-  padding: 2rem 0;
 }
 
-/* footer */
-
-.footer-background{
-  width: 100%;
-  background-color: antiquewhite;
-  padding: 2rem 0;
+.flow {
+  padding-bottom: 1rem;
 }
 
-.footer-bar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.portfolio-box {
+  background-color: aquamarine;
+  padding: 1rem;
 }
 
-/* Utility */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+/* Contact */
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
@@ -236,5 +234,44 @@ input[type=submit] {
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
+}
+
+/* footer */
+
+.footer-background{
+  width: 100%;
+  background-color: antiquewhite;
+  padding: 2rem 0;
+}
+
+.footer-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Utility */
+
+.container{
+  --max-width: 1110px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+
+  overflow: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
