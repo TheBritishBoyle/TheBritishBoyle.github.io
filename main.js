@@ -1,8 +1,17 @@
-function myFunction() {
-    var x = document.getElementById("nav-list");
-    if (x.style.display === "none") {
-      x.style.display = "flex";
+const navList = document.querySelector(".nav-list");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const currentState = button.getAttribute("data-state");
+
+    if (!currentState || currentState === "closed") {
+      button.setAttribute("data-state", "opened");
+      button.setAttribute("aria-expanded", "true");
     } else {
-      x.style.display = "none";
+      button.setAttribute("data-state", "closed");
+      button.setAttribute("aria-expanded", "false");
     }
-  }
+    navList.toggleAttribute("data-visible");
+  });
+});
