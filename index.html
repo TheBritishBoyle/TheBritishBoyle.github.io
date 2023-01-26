@@ -14,12 +14,18 @@
   <body>
     <header class="nav-background">
       <div class="container">
-        <div class="nav-bar">
+        <div class="primary-navigation">
           <h1 href="#">DANIEL BOYLE</h1>
-          <button class="button" onclick="myFunction()">
-            <img src="Images/icon-hamburger.svg" alt="">
+          <button class="button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="50">
+              <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+              </rect>
+              <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+              </rect>
+              <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+              </rect>
+            </svg>
           </button>
-          <div class="break"></div>
           <ul aria-label="Primary" role="list" class="nav-list" id="nav-list">
             <li><a href="#">Home</a></li>
             <li><a href="#About-Me">About Me</a></li>
@@ -38,24 +44,76 @@
 
       <section class="banner" id="About-Me"> 
         <div class="container">
-          <div class="columns">
-            <div>
-              <h1 class="center-text">Daniel Boyle.</h1>
-              <p class="center-text" style="color: var(--clr-white);">Electrical Engineering Student</p>
+          <div class="columns" type="center">
+            <div class="center-flex-div center-text">
+              <h1>About Me</h1>
+              <p>As a current Engineering undergrad student at Queens University, my mission is to get out in the world and continuously improve my technical and life skills within a dynamic and innovative company. I am currently taking a gap year and am eager to step into the workforce.</p>
             </div>
             <img class="image" src="Images/Banner.JPG" alt="">
           </div>
+
         </div>
       </section>
 
       <section class="banner" id="Portfolio"> 
         <div class="container">
-          <div class="columns">
-            <div>
-              <h1 class="center-text">Daniel Boyle.</h1>
-              <p class="center-text" style="color: var(--clr-white);">Electrical Engineering Student</p>
+          <h1 class="center-text">Portfolio</h1>
+          <div class="flow">
+            <div class="portfolio-box">
+              <h2>ACHIEVEMENTS & KEY SKILLS</h2>
+              <ul>
+                <li>Using the Eclipse IDE, I develop my Java skillset through game design and server applications</li>
+                <li>Continuously adapting my Python, Processing, C++, and MATLAB skills through various projects</li>
+                <li>Tinkering with old toys by adding circuitry to change or better functionality</li>
+                <li>First high school student to secure a summer internship at Clearpath Robotics</li>
+                <li>Five Star Award for leadership skills achieved from Scouts Canada</li>
+                <li>Have certifications such as National Lifesaving Instructor and lifeguard and CSIA Level One Ski Instructor</li>
+                <li>Took part in very team-oriented sports such as rugby, where as a team we won the Cwossa Rugby Championships</li>
+              </ul>
             </div>
-            <img class="image" src="Images/Banner.JPG" alt="">
+          </div>
+          <div class="flow">
+            <div class="portfolio-box" >
+              <h2>EDUCATION</h2>
+              <h3>Queens University Undergrad Degree | Second-year Engineering Undergrad | 2020 – Present</h3>
+              <ul>
+                <li>As part of a team, I took part in designing and coding an app for Queens University to use to better distribute technology to Engineering students</li>
+                <li>During a research project my team and I gathered information about motor torque, gear ratios and differential systems</li>
+                <li>We then proceed to design, and 3D print a differential swerve drivetrain for the Queens VEX U robotics team</li>
+                <li>Added to my programing language skillset by developing high-level projects in C++ while simultaneously running simulations in MATLAB</li>
+              </ul>
+              <h3>Sir John A McDonald High School | Four Year Diploma | 2020</h3>
+              <ul>
+                <li>Gathered knowledge on various circuit components that led me to design and construct circuit boards that I used in projects such as a robotic car, line follower, sumo bot and 3D LED cube</li>
+                <li>While using both Python and Processing (Java-based IDE) I learned how to develop and debug projects. During this time, I also expanded my knowledge of Big O notation, the Mandelbrot set and sorting algorithms</li>
+              </ul>
+            </div>
+          </div>
+          <div class="portfolio-box">
+            <h2>EMPLOYMENT HISTORY</h2>
+            <h3>Clearpath Robotics | Robot Assistant - Full-time | June – August 2018</h3>
+            <ul>
+              <li>Using the ROS open-source framework on Linux I was able to test the functionality of hardware on robotic machinery</li>
+              <li>Wrote detailed reports on data I gathered and then proceeded to present them to engineers and other team members</li>
+            </ul>
+            <h3>Canadian Tire | Customer and Product Support Crew - Full Time | May-August 2021 & 2022</h3>
+            <ul>
+              <li>A very labour-intensive position where hard work and commitment were necessary to keep up with the workload of unloading trucks while also working with overstock</li>
+              <li>Introduced to various types of customers where I learned the importance of knowing how to approach and conversate with each differently to achieve the best relationships</li>
+            </ul>
+            <h3>Stork YMCA | Lifeguard and swim Instructor - Part-time | June – December 2019</h3>
+            <ul>
+              <li>Greatly developed my communication skills and used them to teach patrons of all ages the ability to swim as well as new life skills, such as safe water practices and teamwork</li>
+              <li>As a mentor within this community setting, I was required to look and behave professionally while taking responsibility for others’ safety and enjoyment</li>
+            </ul>
+            <h3>UB1 Public Pool | Lifeguard and swim Instructor - Part-time | June – August 2020</h3>
+            <ul>
+              <li>This position helped me continuously develop and adapt my skills to overcome major obstacles. These include learning how to scan for potential dangers as well as putting out fires before they happen</li>
+            </ul>
+            <h3>Chicopee Ski Resort | Ski instructor - Seasonal/Part-time | December 2017 – March 2019</h3>
+            <ul>
+              <li>When struggling to get through to a student, patience was essential as I found that they would improve if I devoted more time while continuously adapting my approach</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -66,22 +124,13 @@
           <form action="contact-form-handler.php">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-        
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Email..">
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        
+            <textarea id="subject" name="subject" placeholder="Enter text.." style="height:200px"></textarea>
             <input type="submit" value="Submit">
-        
           </form>
         </div>
       </section>
