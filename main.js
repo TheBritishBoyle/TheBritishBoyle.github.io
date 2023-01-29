@@ -1,3 +1,4 @@
+
 const navList = document.querySelector(".nav-list");
 const buttons = document.querySelectorAll("button");
 
@@ -15,3 +16,12 @@ buttons.forEach((button) => {
     navList.toggleAttribute("data-visible");
   });
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('scroll-visable', entry.isIntersecting);
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.scroll-hidden');
+hiddenElements.forEach((el) => observer.observe(el));
