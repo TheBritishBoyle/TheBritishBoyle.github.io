@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel Boyle</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -37,19 +35,25 @@
     </header>
 
     <main>
-      <section class="main-banner | center-text">
-        <h1 style="font-size: 5rem;">Daniel Boyle.</h1>
+      <section class="main-banner">
+        <div class="container">
+          <div class="center-div">
+            <div class="typing-demo">
+              <h1 style="font-size: 5rem;">Daniel Boyle.</h1>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="banner" id="About-Me"> 
         <div class="container">
           <div class="row">
-            <div class="center-text | scroll-hidden scroll-hidden-delay | column">
+            <div class="center-text | scroll-hidden scroll-hidden-delay | column-two">
               <h1>About Me</h1>
               <p>As a current Engineering undergrad student at Queens University, my mission is to get out in the world and continuously improve my technical and life skills within a dynamic and innovative company.</p>
             </div>
-            <div class="column">
-              <img class="image | scroll-hidden scroll-hidden-delay" src="Images/Headshot.jpg" alt="">
+            <div class="column-two">
+              <img class="image | scroll-hidden scroll-hidden-delay | grow" src="Images/Headshot.jpg" alt="">
             </div>
           </div>
 
@@ -90,32 +94,69 @@
               </ul>
             </div>
           </div>
-          <div class="portfolio-box">
-            <h2>EMPLOYMENT HISTORY</h2>
-            <h3>Clearpath Robotics | Robot Assistant - Full-time | June – August 2018</h3>
-            <ul>
-              <li>Using the ROS open-source framework on Linux I was able to test the functionality of hardware on robotic machinery</li>
-              <li>Wrote detailed reports on data I gathered and then proceeded to present them to engineers and other team members</li>
-            </ul>
-            <h3>Canadian Tire | Customer and Product Support Crew - Full Time | May-August 2021 & 2022</h3>
-            <ul>
-              <li>A very labour-intensive position where hard work and commitment were necessary to keep up with the workload of unloading trucks while also working with overstock</li>
-              <li>Introduced to various types of customers where I learned the importance of knowing how to approach and conversate with each differently to achieve the best relationships</li>
-            </ul>
-            <h3>Stork YMCA | Lifeguard and swim Instructor - Part-time | June – December 2019</h3>
-            <ul>
-              <li>Greatly developed my communication skills and used them to teach patrons of all ages the ability to swim as well as new life skills, such as safe water practices and teamwork</li>
-              <li>As a mentor within this community setting, I was required to look and behave professionally while taking responsibility for others’ safety and enjoyment</li>
-            </ul>
-            <h3>UB1 Public Pool | Lifeguard and swim Instructor - Part-time | June – August 2020</h3>
-            <ul>
-              <li>This position helped me continuously develop and adapt my skills to overcome major obstacles. These include learning how to scan for potential dangers as well as putting out fires before they happen</li>
-            </ul>
-            <h3>Chicopee Ski Resort | Ski instructor - Seasonal/Part-time | December 2017 – March 2019</h3>
-            <ul>
-              <li>When struggling to get through to a student, patience was essential as I found that they would improve if I devoted more time while continuously adapting my approach</li>
-            </ul>
+
+          <div style="padding-block: 5rem;">
+            <div class="diagonal-background | center-text">
+              <h2 style="padding-block: 5rem;">EMPLOYMENT HISTORY</h2>
+            </div>
           </div>
+
+          <div class="employ-row">
+            <div>
+              <div class="job-row">
+                <div class="job-column | scroll-hidden scroll-hidden-delay">
+                  <img class="image job-image" src="Images/Clearpath.jpg" alt="Clearpath">
+                </div>
+    
+                <div class="job-column | scroll-hidden scroll-hidden-delay">
+                  <img class="image job-image" src="Images/Canadian-Tire.jpg" alt="Clearpath">
+                </div>
+    
+                <div class="job-column | scroll-hidden scroll-hidden-delay">
+                  <img class="image job-image" src="Images/YMCA.png" alt="Clearpath">
+                </div>
+    
+                <div class="job-column | scroll-hidden scroll-hidden-delay">
+                  <img class="image job-image" src="Images/Chicopee.jpeg" alt="Clearpath">
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="job">
+                <h3>Clearpath Robotics | Robot Assistant - Full-time | June – August 2018</h3>
+                <ul>
+                  <li>Using the ROS open-source framework on Linux I was able to test the functionality of hardware on robotic machinery</li>
+                  <li>Wrote detailed reports on data I gathered and then proceeded to present them to engineers and other team members</li>
+                </ul>
+              </div>
+    
+              <div class="job">
+                <h3>Canadian Tire | Customer and Product Support Crew - Full Time | May-August 2021 & 2022</h3>
+                <ul>
+                  <li>A very labour-intensive position where hard work and commitment were necessary to keep up with the workload of unloading trucks while also working with overstock</li>
+                  <li>Introduced to various types of customers where I learned the importance of knowing how to approach and conversate with each differently to achieve the best relationships</li>
+                </ul>
+              </div>
+    
+              <div class="job">
+                <h3>Stork YMCA | Lifeguard and swim Instructor - Part-time | June – December 2019</h3>
+                <ul>
+                  <li>Greatly developed my communication skills and used them to teach patrons of all ages the ability to swim as well as new life skills, such as safe water practices and teamwork</li>
+                  <li>As a mentor within this community setting, I was required to look and behave professionally while taking responsibility for others’ safety and enjoyment</li>
+                </ul>
+              </div>
+    
+              <div class="job">
+                <h3>Chicopee Ski Resort | Ski instructor - Seasonal/Part-time | December 2017 – March 2019</h3>
+                <ul>
+                  <li>When struggling to get through to a student, patience was essential as I found that they would improve if I devoted more time while continuously adapting my approach</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+            
         </div>
       </section>
 
@@ -142,12 +183,17 @@
       <div class="container">
         <div class="footer-bar">
           <h1 href="#">DB</h1>
-            <ul aria-label="Primary" role="list" class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#About-Me">About Me</a></li>
-              <li><a href="#Portfolio">Portfolio</a></li>
-              <li><a href="#Contact">Contact</a></li>
-            </ul>
+          <ul class="icons">
+            <li><a href="https://www.facebook.com/profile.php?id=100085725800427"><i class="fa fa-facebook "></i></a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-boyle-350a7916b/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/daniel.boyle_/?next=%2F"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <ul aria-label="Footer" role="list" class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#About-Me">About Me</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
         </div>
       </div>
     </footer>
